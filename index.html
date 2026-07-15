@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Потенциал сока юдзу на маркетплейсах — разбор категории</title>
+<meta name="description" content="Разбор юзу-ниши на WB и Ozon: спрос, конкуренты по выручке, отзывы, формат, ЗОЖ.">
+</head>
+<body>
+<style>
+  :root{
+    --paper:#f7f6ee; --surface:#fffef9; --surface-2:#fbfaf2;
+    --ink:#16160e; --ink-2:#565549; --muted:#8b8a7c;
+    --line:#e6e4d5; --line-2:#d8d6c4;
+    --yuzu:#8f9a12; --yuzu-bright:#b6c22b; --yuzu-wash:#eef0d4;
+    --good:#0a8f0a; --good-ink:#0a6a0a; --warn:#c98600; --crit:#c0392b;
+    --wb:#2a78d6; --oz:#127e5a; --s-yellow:#eda100; --s-red:#e34948; --s-violet:#4a3aa7;
+    --shadow:0 1px 2px rgba(20,20,10,.05),0 8px 28px rgba(20,20,10,.06);
+    --radius:14px; --serif:Georgia,"Times New Roman",serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    color-scheme:light;
+  }
+  @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){
+    --paper:#100f0b;--surface:#191811;--surface-2:#15140e;--ink:#f6f5ea;--ink-2:#c4c2b2;--muted:#8f8d7f;
+    --line:#2b2a20;--line-2:#38362a;--yuzu:#c3cf3e;--yuzu-bright:#d6e24f;--yuzu-wash:#26260f;
+    --good:#3fbf3f;--good-ink:#57cf57;--warn:#f0b53a;--crit:#e2685a;
+    --wb:#3987e5;--oz:#2bb184;--s-yellow:#c98500;--s-red:#e66767;--s-violet:#9085e9;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);color-scheme:dark;}}
+  :root[data-theme="dark"]{
+    --paper:#100f0b;--surface:#191811;--surface-2:#15140e;--ink:#f6f5ea;--ink-2:#c4c2b2;--muted:#8f8d7f;
+    --line:#2b2a20;--line-2:#38362a;--yuzu:#c3cf3e;--yuzu-bright:#d6e24f;--yuzu-wash:#26260f;
+    --good:#3fbf3f;--good-ink:#57cf57;--warn:#f0b53a;--crit:#e2685a;
+    --wb:#3987e5;--oz:#2bb184;--s-yellow:#c98500;--s-red:#e66767;--s-violet:#9085e9;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);color-scheme:dark;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:960px;margin:0 auto;padding:clamp(20px,4vw,56px) clamp(16px,4vw,40px) 80px;}
+  .col{max-width:680px;}
+  a{color:var(--yuzu);text-underline-offset:2px;}
+  .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+  .eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--yuzu);display:inline-block;}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(28px,4.6vw,46px);line-height:1.12;letter-spacing:-.01em;text-wrap:balance;margin:18px 0 0;}
+  h1 .hl{color:var(--yuzu);font-style:italic;}
+  .lede{font-size:clamp(17px,2.2vw,20px);color:var(--ink-2);max-width:648px;margin:20px 0 0;}
+  .verdict{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:12px 18px;border-radius:999px;background:var(--yuzu-wash);border:1px solid color-mix(in srgb,var(--yuzu) 40%,transparent);font-weight:650;font-size:15px;color:var(--ink);}
+  .verdict b{color:var(--yuzu);font-weight:800;letter-spacing:.02em;}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .badge::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;}
+  .b-wb{color:var(--wb);background:color-mix(in srgb,var(--wb) 13%,transparent);}
+  .b-oz{color:var(--oz);background:color-mix(in srgb,var(--oz) 15%,transparent);}
+  .b-both{color:var(--s-violet);background:color-mix(in srgb,var(--s-violet) 13%,transparent);}
+  .b-web{color:var(--muted);background:color-mix(in srgb,var(--muted) 15%,transparent);}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:34px 0 0;}
+  .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;box-shadow:var(--shadow);}
+  .tile .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;display:flex;justify-content:space-between;gap:8px;align-items:center;}
+  .tile .v{font-size:29px;font-weight:800;letter-spacing:-.02em;margin:8px 0 2px;font-variant-numeric:tabular-nums;}
+  .tile .s{font-size:13.5px;color:var(--ink-2);}
+  .tile .s .up{color:var(--good-ink);font-weight:600;} .tile .s .dn{color:var(--crit);font-weight:600;}
+  section{margin-top:56px;scroll-margin-top:20px;}
+  .snum{font-family:var(--serif);font-size:13px;color:var(--yuzu);font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  h2{font-size:clamp(21px,2.8vw,27px);font-weight:750;letter-spacing:-.01em;margin:6px 0 0;text-wrap:balance;}
+  h2+.sub{color:var(--ink-2);margin:10px 0 0;max-width:664px;}
+  p{margin:16px 0 0;} .col p:first-child{margin-top:16px;}
+  strong{font-weight:680;} .yz{color:var(--yuzu);font-weight:680;}
+  figure{margin:26px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 16px;box-shadow:var(--shadow);}
+  figcaption{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.5;}
+  .fig-h{font-size:14px;font-weight:700;letter-spacing:.02em;margin-bottom:16px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;}
+  .fig-h .note{font-weight:500;color:var(--muted);font-size:12.5px;}
+  .fig-h .rt{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .legend{display:flex;gap:16px;margin-bottom:12px;font-size:12.5px;color:var(--ink-2);}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:14px;height:10px;border-radius:3px;display:inline-block;} .legend i.line{height:3px;}
+  .bars{display:flex;flex-direction:column;gap:12px;}
+  .bar{display:grid;grid-template-columns:150px 1fr auto;align-items:center;gap:12px;font-size:13.5px;}
+  .bar .lab{color:var(--ink-2);text-align:right;line-height:1.2;}
+  .bar .track{height:24px;background:var(--surface-2);border-radius:6px;position:relative;overflow:hidden;border:1px solid var(--line);display:flex;}
+  .bar .fill{height:100%;} .bar .fill.wbf{background:var(--wb);} .bar .fill.ozf{background:var(--oz);}
+  .bar .fill.solo{border-radius:5px 6px 6px 5px;}
+  .bar .val{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;min-width:78px;text-align:right;}
+  .tbl-wrap{overflow-x:auto;margin-top:6px;}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px;}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;white-space:nowrap;}
+  td.n{font-variant-numeric:tabular-nums;text-align:right;font-weight:650;white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  .brand{font-weight:680;} .mut{color:var(--muted);}
+  .lnk{font-size:11.5px;font-weight:600;white-space:nowrap;}.lnk::after{content:" ↗";opacity:.6;}
+  .tag-us{color:var(--yuzu);font-weight:700;font-size:10px;border:1px solid color-mix(in srgb,var(--yuzu) 45%,transparent);border-radius:4px;padding:1px 4px;margin-left:5px;white-space:nowrap;}
+  .chip{font-size:10.5px;font-weight:600;padding:1px 6px;border-radius:5px;background:var(--surface-2);color:var(--muted);white-space:nowrap;}
+  .chip.rtd{color:var(--s-violet);background:color-mix(in srgb,var(--s-violet) 12%,transparent);}
+  .chip.conc{color:var(--yuzu);background:var(--yuzu-wash);}
+  .call{margin-top:24px;border-left:3px solid var(--yuzu);background:var(--surface-2);border-radius:0 12px 12px 0;padding:16px 20px;}
+  .call.win{border-left-color:var(--good);} .call.risk{border-left-color:var(--crit);} .call.info{border-left-color:var(--wb);}
+  .call .ct{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--yuzu);}
+  .call.win .ct{color:var(--good-ink);} .call.risk .ct{color:var(--crit);} .call.info .ct{color:var(--wb);}
+  .call p{margin-top:7px;font-size:14.5px;}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:22px;}
+  .q{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 16px;font-size:13.5px;}
+  .q .qt{color:var(--ink);line-height:1.5;} .q .qm{margin-top:9px;font-size:11.5px;color:var(--muted);}
+  .q.neg{border-color:color-mix(in srgb,var(--crit) 30%,var(--line));} .q.pos{border-color:color-mix(in srgb,var(--good) 28%,var(--line));}
+  .q .qi{font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;} .q.pos .qi{color:var(--good-ink);} .q.neg .qi{color:var(--crit);}
+  .ladder{display:flex;flex-direction:column;gap:2px;margin-top:6px;}
+  .rung{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:13px 16px;border-radius:10px;border:1px solid var(--line);}
+  .rung .rt{font-weight:680;font-size:14px;} .rung .rs{font-size:12.5px;color:var(--ink-2);margin-top:2px;} .rung .rp{font-variant-numeric:tabular-nums;font-weight:750;white-space:nowrap;font-size:14px;}
+  .rung.top{background:color-mix(in srgb,var(--s-violet) 9%,var(--surface));} .rung.gap{background:var(--yuzu-wash);border-color:color-mix(in srgb,var(--yuzu) 45%,transparent);border-style:dashed;} .rung.gap .rt{color:var(--yuzu);} .rung.mid{background:var(--surface)} .rung.low{background:var(--surface-2);}
+  .conn{height:14px;width:2px;background:var(--line-2);margin-left:22px;}
+  .fc{display:flex;flex-direction:column;gap:16px;margin-top:4px;}
+  .fcrow{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center;}
+  .fcrow .fl{font-weight:700;font-size:14px;} .fcrow .fl small{display:block;color:var(--muted);font-weight:500;font-size:11.5px;margin-top:2px;}
+  .fctrack{position:relative;height:34px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;}
+  .fcband{position:absolute;top:0;bottom:0;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;}
+  .chart-svg{width:100%;height:auto;display:block;overflow:visible;}
+  .axis-lab{fill:var(--muted);font-size:10px;font-family:var(--sans);} .peak-lab{fill:var(--ink-2);font-size:10px;font-weight:600;font-family:var(--sans);}
+  .rec{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:24px;}
+  .rc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 17px;box-shadow:var(--shadow);}
+  .rc .rn{font-family:var(--serif);color:var(--yuzu);font-weight:700;font-size:15px;} .rc .rh{font-weight:700;margin:6px 0 4px;font-size:15px;} .rc p{margin-top:4px;font-size:13.5px;color:var(--ink-2);}
+  hr.div{border:none;border-top:1px solid var(--line);margin:56px 0 0;}
+  footer{margin-top:34px;font-size:13px;color:var(--ink-2);}
+  footer h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px;}
+  footer ul{margin:0;padding-left:18px;} footer li{margin:5px 0;} .src{font-size:12px;color:var(--muted);word-break:break-word;}
+  .theme-toggle{position:fixed;top:14px;right:14px;z-index:9;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);border-radius:999px;padding:7px 13px;font-size:12.5px;cursor:pointer;font-family:var(--sans);box-shadow:var(--shadow);}
+  @media (max-width:560px){.bar{grid-template-columns:104px 1fr;} .bar .val{grid-column:2;text-align:left;min-width:0;} .bar .lab{font-size:12px;}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+</style>
+
+<button class="theme-toggle" onclick="(function(){var r=document.documentElement;var d=(r.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'))==='dark';r.setAttribute('data-theme',d?'light':'dark');})()">◐ тема</button>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow"><span class="dot"></span>Исследование потенциала продукта<span>·</span>Запрос продуктовой команды<span>·</span>15 июля 2026</div>
+    <h1>Концентрат сока <span class="hl">юдзу</span> в малых бутылках: ниша реальная, живая на обеих площадках, но премиальная</h1>
+    <p class="lede">Юзу-еда на маркетплейсах — это ~6,7 млн ₽/мес, и <strong>Ozon в 2,5× больше Wildberries</strong>. Заходить стоит точечно — премиальным, честным по составу продуктом. Наш бренд <strong>ESORO</strong> уже №2 на Ozon в юдзу-чае, так что вход в сок/концентрат — соседний, на своём бренде.</p>
+    <div class="verdict"><b>Вердикт: условное ДА</b> — премиум-B2C, Ozon-first, старт под осень/зиму, опора на свой бренд ESORO (уже №2 на Ozon).</div>
+
+    <div class="call info" style="margin-top:22px"><div class="ct">Как читать источники</div><p style="font-size:14px"><span class="badge b-wb">WB</span> и <span class="badge b-oz">Ozon</span> — <strong>измеренная выручка по SKU</strong> (обе площадки, единый метод: MPStats category-items + фильтр по слову через наш `competitor-pool`). <span class="badge b-both">обе</span> — спрос по слову. <span class="badge b-web">веб</span> — тренд/формат/сырьё/ЗОЖ. <em>Поправка к первой версии: выручку конкурентов Ozon мы всё-таки достаём — через competitor-pool, а не через веб-витрину.</em></p></div>
+
+    <div class="tiles">
+      <div class="tile"><div class="k"><span>Юзу-еда, обе площадки</span><span class="badge b-both">WB+Ozon</span></div><div class="v">~6,7 млн ₽<span style="font-size:15px;font-weight:600;color:var(--muted)">/мес</span></div><div class="s">Топ по выручке, лето (провал). Годовая ёмкость ~<strong>101 млн ₽</strong></div></div>
+      <div class="tile"><div class="k"><span>Ozon против WB</span><span class="badge b-oz">измерено</span></div><div class="v">Ozon ×2,5</div><div class="s">Ozon 4,78 млн · WB 1,92 млн ₽/мес — Ozon крупнее и разнообразнее</div></div>
+      <div class="tile"><div class="k"><span>Целевой под-сегмент</span><span class="badge b-both">обе</span></div><div class="v">3,18 млн ₽<span style="font-size:15px;font-weight:600;color:var(--muted)">/мес</span></div><div class="s">Сиропы/концентраты/основы для напитков — ядро рынка</div></div>
+      <div class="tile"><div class="k"><span>Написание в поиске</span><span class="badge b-both">WB+Ozon</span></div><div class="v">«юдзу»</div><div class="s">В поиске WB в 7× выше «юзу» — под него SEO и карточку</div></div>
+    </div>
+  </header>
+
+  <!-- 1 -->
+  <section>
+    <div class="snum">01 — Спрос и тренд <span class="badge b-both">WB + Ozon</span></div>
+    <div class="col">
+      <h2>Юдзу на подъёме, но спрос ведёт HoReCa, а не розница</h2>
+      <p class="sub">Тренд подтверждён глобально и локально; провал сейчас — сезонный.</p>
+      <p>Юдзу — восходящий тренд 2025→2026: Monin «вкус года 2025», прогнозы IFT/Mintel-2026, российские медиа «повсюду». Доминирует написание <span class="yz">«юдзу»</span> (с «д») — в поиске WB в 7× выше «юзу». <strong>Оговорка:</strong> «вкус года 2026» у Monin уже кокос — юдзу в фазе устойчивого второго года; и тренд пока ведёт HoReCa, розница на МП формируется.</p>
+    </div>
+    <figure>
+      <div class="fig-h"><span>Сезонность спроса на «юдзу» в поиске</span><span class="rt"><span class="badge b-both">WB + Ozon</span></span></div>
+      <div class="legend"><span><i class="line" style="background:var(--yuzu)"></i>Wildberries</span><span><i class="line" style="background:var(--oz)"></i>Ozon</span></div>
+      <svg class="chart-svg" viewBox="0 0 720 230" role="img" aria-label="Частотность запроса юдзу по месяцам на WB и Ozon: пики декабрь/май, провал лето; на Ozon аномальный всплеск июнь 2025."><g id="season"></g></svg>
+      <figcaption>Пик — <strong>декабрь</strong> и весна; провал — лето (сейчас). Амплитуда на WB ≈ <strong>1,64×</strong>. На Ozon — аномальный всплеск июнь-2025 (вирусный момент/промо) и недавний рост в июле-2026. Запуск и рекламу — под <span class="yz">осенне-зимний разгон</span>.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 2 -->
+  <section>
+    <div class="snum">02 — Рынок: обе площадки <span class="badge b-wb">WB</span> <span class="badge b-oz">Ozon</span></div>
+    <div class="col">
+      <h2>Ozon — бо́льший и более разнообразный рынок юдзу</h2>
+      <p class="sub">Единый метод по обеим площадкам (competitor-pool: топ по реальной выручке за ~30 дней).</p>
+      <p>Юзу-еда на МП ≈ <strong>6,7 млн ₽/мес</strong> в летний провал: <span class="badge b-oz">Ozon 4,78 млн</span> против <span class="badge b-wb">WB 1,92 млн</span> — <strong>Ozon в 2,5×</strong>. Ядро на обеих — <span class="yz">сиропы/концентраты/основы для напитков (3,18 млн ₽/мес)</span>, ровно целевой под-сегмент продукта. Но на Ozon заметно живее ещё два пласта: <strong>соусы-понзу</strong> (Tamaki — лидер Ozon, 685 тыс ₽!) и <strong>готовые напитки (RTD)</strong> — тоники, лимонады, энергетики со вкусом юдзу.</p>
+    </div>
+    <figure>
+      <div class="fig-h"><span>Юзу-еда по под-категориям: WB против Ozon</span><span class="rt"><span class="note">выручка/мес · лето 2026</span></span></div>
+      <div class="legend"><span><i style="background:var(--wb)"></i>Wildberries</span><span><i style="background:var(--oz)"></i>Ozon</span></div>
+      <div class="bars" id="subseg"></div>
+      <figcaption>На Ozon каждая под-категория крупнее. <strong>RTD (готовые напитки)</strong> — 807 тыс ₽/мес на двоих (энергетик ADRENALINE на WB, тоник Абрау-Дюрсо и POSITIVITY на Ozon): сигнал, что покупатель берёт не только концентрат для разведения, но и <span class="yz">готовый юдзу-напиток</span>.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 3 -->
+  <section>
+    <div class="snum">03 — Конкуренты по выручке <span class="badge b-oz">Ozon</span> <span class="badge b-wb">WB</span></div>
+    <div class="col">
+      <h2>Кто зарабатывает — и прямые ссылки на карточки</h2>
+      <p class="sub">Топ по реальной выручке (~30 дней). Ранжир по деньгам, не по отзывам. Ссылки открывают карточку на площадке.</p>
+      <p><strong>Tamaki</strong> — лидер Ozon (685 тыс ₽, 1708 шт), а на WB тот же бренд просел до 45 тыс: площадки живут по-разному. <span class="yz">Наш ESORO — №2 на Ozon</span> (юдзу-чай, 593 тыс ₽), но НЕ в соке/концентрате — вход туда для нас соседний. Ближайший к продукту под-сегмент — концентраты/сиропы (Spoom, The Flip, RiCHEZA, Barinoff, Clavis).</p>
+    </div>
+    <figure>
+      <div class="fig-h"><span>Топ юдзу-еды на Ozon</span><span class="rt"><span class="note">выручка ~30 дн</span><span class="badge b-oz">Ozon 4,78 млн ₽/мес</span></span></div>
+      <div class="tbl-wrap"><table><thead><tr><th>Бренд / товар</th><th>Тип</th><th style="text-align:right">Цена</th><th style="text-align:right">Выручка/мес</th><th>Карточка</th></tr></thead><tbody id="ozbody"></tbody></table></div>
+    </figure>
+    <figure>
+      <div class="fig-h"><span>Топ юдзу-еды на Wildberries</span><span class="rt"><span class="note">выручка ~30 дн</span><span class="badge b-wb">WB 1,92 млн ₽/мес</span></span></div>
+      <div class="tbl-wrap"><table><thead><tr><th>Бренд / товар</th><th>Тип</th><th style="text-align:right">Цена</th><th style="text-align:right">Выручка/мес</th><th>Карточка</th></tr></thead><tbody id="wbbody"></tbody></table></div>
+      <figcaption><strong>Отзывы ≠ выручка:</strong> на WB у Tamaki 28 тыс отзывов, но выручка просела; смотрим деньги. Прямого моно-юдзу «концентрат сока» в малой рознице от РФ-бренда нет — есть импортный японский 100% сок (раздел 05).</figcaption>
+    </figure>
+  </section>
+
+  <!-- 4 -->
+  <section>
+    <div class="snum">04 — Голос покупателя <span class="badge b-wb">WB</span> <span class="badge b-oz">Ozon</span></div>
+    <div class="col">
+      <h2>Вкус любят — и наказывают за подделку</h2>
+      <p class="sub">Разбор отзывов конкурентов по темам (обе площадки; на Ozon у карточек тысячи отзывов).</p>
+      <p>Покупатель <strong>знает настоящий вкус юдзу</strong> и отличает фейк. Хвалят — за аромат и домашние сценарии: лимонады, коктейли, чай, десерты, заправки. Ругают — по трём воспроизводимым темам, и все три — прямая продуктовая подсказка.</p>
+    </div>
+    <div class="quotes">
+      <div class="q neg"><div class="qi">Боль 1 · Подделка / пересахаренность</div><div class="qt" style="margin-top:8px">«Даже близко не японский юдзу. Сахара сверх нормы — сахарный сироп с кусочками цитруса». «Химоза». «Это не юдзу».</div><div class="qm">Tamaki, The Flip, Spoom</div></div>
+      <div class="q neg"><div class="qi">Боль 2 · Слабая концентрация</div><div class="qt" style="margin-top:8px">«Концентрат должен быть насыщенным — а тут надо лить очень много, чтобы почувствовать вкус».</div><div class="qm">The Flip · концентрат-основа</div></div>
+      <div class="q neg"><div class="qi">Боль 3 · Бой упаковки</div><div class="qt" style="margin-top:8px">«Постоянно сломанные крышки». «Жидкость без пупырки — почти каждая битая». «Дозатором пользоваться нельзя».</div><div class="qm">Spoom, Barinoff, Tamaki</div></div>
+      <div class="q pos"><div class="qi">Что любят</div><div class="qt" style="margin-top:8px">«Очень нравятся эти основы». «Для домашних лимонадов — то что надо». «Тонкие нотки цитрусовых, идеально для салатов».</div><div class="qm">DIY: лимонады, коктейли, заправки</div></div>
+    </div>
+    <div class="call win"><div class="ct">Продуктовая гипотеза</div><p>Аутентичный, <strong>реально концентрированный</strong> юдзу-сок в <strong>прочной таре с дозатором</strong> бьёт ровно в три жалобы категории. «Честность состава» — незакрытая потребность.</p></div>
+  </section>
+
+  <!-- 5 -->
+  <section>
+    <div class="snum">05 — Формат и незанятая клетка <span class="badge b-web">веб</span></div>
+    <div class="col">
+      <h2>Малая розничная бутылка есть — но занята дорогим импортом без бренда</h2>
+      <p class="sub">Проверено вебом с состязательной перепроверкой.</p>
+      <p>Чистый сок юдзу в малой бутылке в РФ есть — но только как <strong>премиальный японский импорт</strong> (ITO NOEN, Yuzukko: ~700–840 ₽/100 мл) через азиатские магазины и точечно на Ozon. Доступную «юдзу-основу для лимонада» уже занял <strong>Гурмикс</strong> (купаж, ~160–300 ₽). Свободна клетка <span class="yz">моно-юдзу питьевого концентрата в малой бутылке от доступного российского бренда</span>.</p>
+    </div>
+    <figure>
+      <div class="fig-h"><span>Ценовая лестница формата</span><span class="rt"><span class="note">₽ за 100 мл эквивалента</span><span class="badge b-web">веб</span></span></div>
+      <div class="ladder">
+        <div class="rung top"><div><div class="rt">Японский 100% сок, малая бутылка (импорт)</div><div class="rs">ITO NOEN, Yuzukko · 100–200 мл · «премиум для гурманов»</div></div><div class="rp">700–840 ₽</div></div>
+        <div class="conn"></div>
+        <div class="rung gap"><div><div class="rt">◆ Свободная клетка: честный доступный моно-юдзу концентрат</div><div class="rs">Малая бутылка · «настоящий юдзу, не химоза» · нашего/российского бренда нет</div></div><div class="rp">~350–600 ₽?</div></div>
+        <div class="conn"></div>
+        <div class="rung mid"><div><div class="rt">Гурмикс «Лимонад Бар» (купаж с юдзу)</div><div class="rs">Мандарин-юдзу-каламанси · 150 г · масс-ритейл</div></div><div class="rp">160–300 ₽</div></div>
+        <div class="conn"></div>
+        <div class="rung low"><div><div class="rt">HoReCa-сиропы/концентраты 1 л (Spoom, Barinoff, RiCHEZA)</div><div class="rs">Дёшево за мл за счёт сахарной основы · для баров</div></div><div class="rp">~45–90 ₽</div></div>
+      </div>
+      <figcaption>Просвет между дорогим премиум-импортом сверху и сахарной HoReCa-литровкой снизу — окно для доступного, но честного розничного формата.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 6 -->
+  <section>
+    <div class="snum">06 — Сырьё и почему рынок пересахаривает <span class="badge b-web">веб</span></div>
+    <div class="col">
+      <h2>Настоящий юдзу дорог — отсюда «химоза», и отсюда наша возможность</h2>
+      <p class="sub">Почему рынок экономит на юдзу — и где в этом наш козырь.</p>
+      <p>Сырьё структурно дорогое: выход сока ~10%, ручной сбор, три страны-производителя. Сок дороже сахара <strong>в ~15–40 раз</strong>. Поэтому рынок экономит: сироп 1883 — <strong>3,9% сока и 57% сахара</strong>; «юзу»-концентрат RiCHEZA — грейпфрут+лимон+апельсин <em>без юдзу</em>. Отсюда жалобы «химоза» — и незакрытый запрос на честный состав.</p>
+    </div>
+    <div class="call win"><div class="ct">Стратегическое преимущество</div><p>Бренд <strong>ESORO — наш</strong> и уже <strong>№2 на Ozon</strong> в юдзу-чае: продавец карточки (SKU 175209736) = <strong>ResFood</strong> (поле seller MPStats — первичный пруф; обычный Ozon). Значит у нас уже есть <strong>присутствие и узнаваемость в юдзу-нише</strong> — вход в сок/концентрат соседний, на своём бренде, а не с нуля.</p></div>
+  </section>
+
+  <!-- 7 -->
+  <section>
+    <div class="snum">07 — Покупатель и канал <span class="badge b-web">веб</span></div>
+    <div class="col">
+      <h2>Малая бутылка — это розница, отдельный от опта покупатель</h2>
+      <p class="sub">Малый формат несёт ~2× цену за мл — её платит розничный гурман.</p>
+      <p><strong>B2B HoReCa</strong> берёт 0,5–1 л по низкой цене за мл; <strong>B2C</strong> (домашняя азиатская кухня, ЗОЖ, домашние бармены) берёт малую бутылку и платит за «настоящий, без сахара». Спрос растёт именно в B2C — безалкогольные/функциональные напитки +8,3% за год. Малая розничная бутылка = <strong>новый B2C-канал розницы</strong>, отдельный от оптового/HoReCa-спроса.</p>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section>
+    <div class="snum">08 — Угол ЗОЖ / здоровое питание <span class="badge b-web">веб</span></div>
+    <div class="col">
+      <h2>Сильная wellness-легенда и готовая полка «шотов» — но угол надо создавать</h2>
+      <p class="sub">Взгляд с точки зрения здорового питания и функциональных напитков.</p>
+      <p>У юдзу мощная ЗОЖ-легенда: <strong>витамина C втрое больше, чем в лимоне</strong>, антиоксиданты. В РФ рынок функциональных напитков растёт быстрее всех в Европе (~9%/год), спрос на «без сахара». На WB есть даже категория «Продукты/Здоровое питание». Юдзу уже заходит в премиум-ЗОЖ: сорбет ВкусВилл, тоник Абрау-Дюрсо.</p>
+    </div>
+    <div class="call win"><div class="ct">Белое пятно</div><p>В РФ сформирована полка <strong>«витаминный / иммунный шот» малого объёма</strong> — прямой аналог формату (365detox 150 мл — 280 ₽; ВкусВилл 100 мл — 134–147 ₽). Но <span class="yz">юдзу-шота иммунитета НЕТ</span>. Наш 100% сок без сахара ложится сюда органично; ценовой якорь — 100 мл за 130–280 ₽. Это перекликается с живым RTD-пластом на МП (раздел 02).</p></div>
+    <div class="call risk"><div class="ct">Границы и риск</div><p>Брать ЗОЖ как «вкусный функциональный» посыл, <strong>не как БАД/лечение</strong>: «источник витамина C» без «лечит иммунитет» — иначе маркировка БАД (Честный Знак, с 01.03.2025) и риск «псевдоЗОЖ». Прямой со-спрос «юдзу + иммунитет» не подтверждён — угол <strong>формировать контентом/SEO</strong> + A/B «гастро-вкус vs ЗОЖ-шот».</p></div>
+  </section>
+
+  <!-- 9 -->
+  <section>
+    <div class="snum">09 — Рекомендация</div>
+    <div class="col"><h2>Условное ДА — как это сделать</h2></div>
+    <div class="rec">
+      <div class="rc"><div class="rn">A</div><div class="rh">Премиум-моно-юдзу, честный состав</div><p>Высокий % настоящего юдзу на этикетке; отстройка от «химоза» — это главный незакрытый запрос категории.</p></div>
+      <div class="rc"><div class="rn">B</div><div class="rh">Ozon-first</div><p>Ozon в 2,5× больше WB, спрос на «сок/концентрат юдзу» структурирован, а наш ESORO уже №2. Заходим сюда первым, WB — вторым.</p></div>
+      <div class="rc"><div class="rn">C</div><div class="rh">Рассмотреть RTD-формат</div><p>Готовые юдзу-напитки (тоник/лимонад/шот) — живой пласт 807 тыс ₽/мес. Возможно, ready-to-drink важнее концентрата для розницы.</p></div>
+      <div class="rc"><div class="rn">D</div><div class="rh">Тара с дозатором + старт под зиму</div><p>Бой упаковки — топ-жалоба; пик спроса — декабрь (×1,64). Сток и реклама — под сезон.</p></div>
+      <div class="rc"><div class="rn">E</div><div class="rh">ЗОЖ-угол A/B</div><p>«Юдзу, витамин C, без сахара» в свободной нише иммунных шотов — осторожно с обещаниями; A/B против гастро-вкуса.</p></div>
+      <div class="rc"><div class="rn">F</div><div class="rh">Тест малой партией</div><p>Спрос на малый розничный формат не доказан — проверяем ограниченным тиражом до масштабирования.</p></div>
+    </div>
+    <div class="call risk"><div class="ct">Чего не делать</div><p>Не гнаться малой бутылкой за баром/кофейней (это игра 1-л SKU и HoReCa — у нас уже есть отдельно). Не выходить «ещё одним разбавленным сиропом». Не уходить в «БАД/лечение».</p></div>
+  </section>
+
+  <hr class="div">
+  <footer>
+    <h3>Методология и данные</h3>
+    <ul>
+      <li><strong>Рынок и конкуренты (WB + Ozon) <span class="badge b-wb">WB</span> <span class="badge b-oz">Ozon</span>:</strong> единый метод — MPStats <span class="src">analytics/v1/{oz|wb}/category/items</span> + серверный фильтр по названию (наш инструмент <span class="src">competitor-pool</span>), топ по выручке за ~30 дней, дедуп по SKU. Корни: Ozon «Продукты питания», WB «Продукты».</li>
+      <li><strong>Спрос (обе):</strong> MPStats <span class="src">get_keyword_frequency</span>, помесячно.</li>
+      <li><strong>Отзывы:</strong> MPStats <span class="src">get_item_comments</span> / <span class="src">ozon-sku comments</span> по лидерам.</li>
+      <li><strong>Тренд, формат, сырьё, ЗОЖ <span class="badge b-web">веб</span>:</strong> веер из 6 направлений × состязательная перепроверка (11 агентов, ~170 источников).</li>
+    </ul>
+    <h3>Поправка к первой версии (честно)</h3>
+    <ul>
+      <li>В v1–v2 было сказано «выручка Ozon недоступна». <strong>Это неверно.</strong> Выручку конкурентов Ozon мы достаём через <span class="src">competitor-pool</span> (category-items + фильтр) — метод документирован в нашей же карте <span class="src">docs/api-capabilities.md</span>. Провал MCP-ниши (404) и пустой per-SKU period_stats — тупики, но обход есть. Собственный Ozon Seller API (Премиум ПРО) конкурентов по продажам не даёт — только цены/позицию и запросы по нашим SKU.</li>
+    </ul>
+    <h3>Прочие границы</h3>
+    <ul>
+      <li>Числа — «топ по выручке» (лето/провал), не полный census ниши. Годовая ёмкость ~101 млн ₽ — оценка (×сезон). Прогноз и юнит-экономику по конкретному товару считаем отдельно, когда будет продукт.</li>
+      <li>Историческая помесячная выручка по SKU недоступна (тариф MPStats обрезает дневной ряд до ~недели) — сезонность по частотности слова.</li>
+    </ul>
+    <p class="src" style="margin-top:22px">Источники: mpstats.io (category-items) · Monin «Flavor of the Year 2025» · IFT Outlook 2026 · Healthline/Cleveland Clinic · 365detox/ВкусВилл · ozon.ru · MPStats (продавец ESORO-чая = ResFood). Пробный прогон продакт-менеджера MCP_MP · без изменений в кабинетах и ценах.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var D={
+    season:[["2024-07",671],["2024-08",724],["2024-09",679],["2024-10",712],["2024-11",716],["2024-12",810],["2025-01",795],["2025-02",818],["2025-03",680],["2025-04",860],["2025-05",968],["2025-06",744],["2025-07",635],["2025-08",666],["2025-09",591],["2025-10",591],["2025-11",658],["2025-12",916],["2026-01",630],["2026-02",681],["2026-03",790],["2026-04",847],["2026-05",777],["2026-06",796],["2026-07",680]],
+    seasonOz:[["2024-07",196],["2024-08",201],["2024-09",179],["2024-10",236],["2024-11",276],["2024-12",423],["2025-01",314],["2025-02",285],["2025-03",333],["2025-04",390],["2025-05",595],["2025-06",1529],["2025-07",856],["2025-08",365],["2025-09",293],["2025-10",238],["2025-11",282],["2025-12",288],["2026-01",245],["2026-02",263],["2026-03",311],["2026-04",312],["2026-05",328],["2026-06",316],["2026-07",652]],
+    subseg:[["Сироп/концентрат/основа",1095330,2085871],["Соус / понзу",180186,841198],["Чай",158771,826247],["Готовый напиток (RTD)",71671,735644],["Сладости / снеки",94424,275075]],
+    ozComp:[
+      [1844141646,"Соус Юдзу Tamaki 470 мл","Tamaki",465,684964,"соус"],
+      [175209736,"Юдзу Чай ESORO — цитрусовый напиток","ESORO",1201,593358,"чай",1],
+      [321620495,"Концентрат SPOOM PUREE Юдзу 1 кг","Spoom",792,538022,"конц"],
+      [1850834210,"Основа для лимонада/коктейлей Клубника-юдзу","The FLIP",685,259981,"конц"],
+      [3183734708,"Печенье PUR-PUR вишня-юдзу","Pekarro",657,259538,"сладость"],
+      [3969359656,"Тоник Abrau со вкусом юдзу","Абрау-Дюрсо",2006,242239,"rtd"],
+      [3550752145,"Концентрат Юзу RiCHEZA 1 кг","RICHEZA",881,235975,"конц"],
+      [191360590,"Сироп Spoom Юдзу 1 л","Spoom",608,189473,"конц"],
+      [4117859959,"Газированный напиток POSITIVITY юдзу","—",1132,171572,"rtd"],
+      [1030485389,"Основа/сироп для коктейлей Clavis","Clavis",978,141263,"конц"],
+      [3451460424,"Напиток Dr. Drinks микс (юдзу)","IMPORTDRINKS",850,119745,"rtd"],
+      [3543388300,"Концентрат Юзунара 1 кг","The FLIP",677,91009,"конц"]
+    ],
+    wbComp:[
+      [918334518,"Энергетик Адреналин Юдзу-Клубника","ADRENALINE",1576,293136,"rtd"],
+      [326821808,"Основа концентрат Клубника-юдзу 1 кг","The Flip",613,240887,"конц"],
+      [40813226,"Концентрат Юдзу пюре 1 кг","Spoom",829,189710,"конц"],
+      [15134458,"Сироп Юдзу 1 л","Spoom",580,160625,"конц"],
+      [176206456,"Концентрат Юзу 1 кг","Barinoff",658,118457,"конц"],
+      [786632866,"Концентрат Юзунара 1 кг","The Flip",613,72167,"конц"],
+      [833919227,"Чай чёрный с ароматом юдзу","RICHARD",105,66784,"чай"],
+      [686539295,"Печенье вишня-юдзу","Морозова",1542,54379,"сладость"],
+      [418600446,"Соус «Юдзу» для мяса/салатов","Tamaki",334,44913,"соус"],
+      [183847910,"Основа для лимонада мандарин-юдзу","Гурмикс",207,39744,"конц"],
+      [869008068,"Соус цитрусовый с юдзу","Ikari",570,39046,"соус"],
+      [170926485,"Набор сиропов (юдзу)","Spoom",893,38656,"конц"]
+    ],
+  };
+  function rub(n){return n.toLocaleString('ru-RU')+' ₽';}
+  var ns='http://www.w3.org/2000/svg';
+  function mk(t,a){var e=document.createElementNS(ns,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+
+  (function(){
+    var g=document.getElementById('season');if(!g)return;
+    var W=720,H=230,PL=34,PR=14,PT=16,PB=30,max=2100;
+    var d=D.season,d2=D.seasonOz;
+    var x=function(i){return PL+i*(W-PL-PR)/(d.length-1);};
+    var y=function(v){return PT+(max-v)/max*(H-PT-PB);};
+    [0,500,1000,1500,2000].forEach(function(gv){g.appendChild(mk('line',{x1:PL,x2:W-PR,y1:y(gv),y2:y(gv),stroke:'var(--line)','stroke-width':1}));var t=mk('text',{x:4,y:y(gv)+3,'class':'axis-lab'});t.textContent=gv;g.appendChild(t);});
+    function draw(data,color,area){var p='',ar='M'+x(0)+','+(H-PB);data.forEach(function(pt,i){var cx=x(i),cy=y(pt[1]);p+=(i?'L':'M')+cx+','+cy;ar+='L'+cx+','+cy;});ar+='L'+x(data.length-1)+','+(H-PB)+'Z';if(area)g.appendChild(mk('path',{d:ar,fill:'var(--yuzu-wash)',opacity:.6}));g.appendChild(mk('path',{d:p,fill:'none',stroke:color,'stroke-width':2,'stroke-linejoin':'round'}));}
+    draw(d,'var(--yuzu)',true);draw(d2,'var(--oz)',false);
+    g.appendChild(mk('circle',{cx:x(11),cy:y(d2[11][1]),r:3.5,fill:'var(--oz)',stroke:'var(--surface)','stroke-width':1.5}));
+    var t1=mk('text',{x:x(11),y:y(d2[11][1])-8,'text-anchor':'middle','class':'peak-lab',fill:'var(--oz)'});t1.textContent='2080 (аномалия)';g.appendChild(t1);
+    g.appendChild(mk('circle',{cx:x(17),cy:y(d[17][1]),r:3.5,fill:'var(--yuzu)',stroke:'var(--surface)','stroke-width':1.5}));
+    var t2=mk('text',{x:x(17),y:y(d[17][1])-8,'text-anchor':'middle','class':'peak-lab'});t2.textContent='дек';g.appendChild(t2);
+    d.forEach(function(pt,i){if(i%4===0||i===d.length-1){var t=mk('text',{x:x(i),y:H-8,'text-anchor':'middle','class':'axis-lab'});var mm=pt[0].split('-');t.textContent=mm[1]+'.'+mm[0].slice(2);g.appendChild(t);}});
+  })();
+
+  // stacked WB|Ozon sub-segment bars
+  (function(){
+    var el=document.getElementById('subseg');if(!el)return;
+    var max=0;D.subseg.forEach(function(r){max=Math.max(max,r[1]+r[2]);});
+    D.subseg.forEach(function(r){
+      var wbw=r[1]/max*100,ozw=r[2]/max*100;
+      var row=document.createElement('div');row.className='bar';
+      row.innerHTML='<div class="lab">'+r[0]+'</div><div class="track"><div class="fill wbf" style="width:'+wbw+'%"></div><div class="fill ozf" style="width:'+ozw+'%"></div></div><div class="val">'+rub(r[1]+r[2])+'</div>';
+      el.appendChild(row);
+    });
+  })();
+
+  function compTable(id,rows,linkFn){
+    var tb=document.getElementById(id);if(!tb)return;
+    var typeLabel={конц:'концентрат',соус:'соус',чай:'чай',rtd:'готовый напиток',сладость:'сладость'};
+    rows.forEach(function(r){
+      var us=r[6]?'<span class="tag-us">наш бренд</span>':'';
+      var tcls=r[5]==='rtd'?'chip rtd':(r[5]==='конц'?'chip conc':'chip');
+      var tr=document.createElement('tr');
+      tr.innerHTML='<td><span class="brand">'+r[2]+'</span>'+us+'<br><span class="mut">'+r[1]+'</span></td>'+
+        '<td><span class="'+tcls+'">'+(typeLabel[r[5]]||r[5])+'</span></td>'+
+        '<td class="n">'+r[3]+' ₽</td><td class="n">'+rub(r[4])+'</td>'+
+        '<td><a class="lnk" href="'+linkFn(r[0])+'" target="_blank" rel="noopener">открыть</a></td>';
+      tb.appendChild(tr);
+    });
+  }
+  compTable('ozbody',D.ozComp,function(id){return 'https://www.ozon.ru/product/'+id+'/';});
+  compTable('wbbody',D.wbComp,function(id){return 'https://www.wildberries.ru/catalog/'+id+'/detail.aspx';});
+
+})();
+</script>
+
+</body>
+</html>
